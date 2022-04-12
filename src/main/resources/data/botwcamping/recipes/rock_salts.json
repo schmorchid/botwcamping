@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "botwcamping:salt_chunk"
+    }
+  ],
+  "result": {
+    "item": "botwcamping:salts",
+    "count": 3
+  }
+}

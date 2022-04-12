@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "botwcamping:salt_chunk"
+    }
+  },
+  "result": {
+    "item": "botwcamping:salt_ore",
+    "count": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SS",
+    "SS"
+  ],
+  "key": {
+    "S": {
+      "item": "botwcamping:salt_ore"
+    }
+  },
+  "result": {
+    "item": "botwcamping:polished_salt",
+    "count": 4
+  }
+}

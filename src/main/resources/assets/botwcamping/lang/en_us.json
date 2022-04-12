@@ -1,0 +1,25 @@
+{
+  "itemGroup.botwc_blocks_tab": "BOTW Camping Blocks",
+  "itemGroup.botwc_items_tab": "BOTW Camping Items",
+  "itemGroup.botwc_food_tab": "BOTW Camping Foodstuffs",
+
+  "item.botwcamping.nehehehe": "Nehehehe",
+  "item.botwcamping.truffle": "Truffle",
+  "item.botwcamping.salt_chunk": "Rock Salt Chunk",
+  "item.botwcamping.salts": "Rock Salts",
+  "item.botwcamping.palm_fruit": "Palm Fruit",
+  "item.botwcamping.meat_skewer": "Meat Skewer",
+  "item.botwcamping.glazed_meat_skewer": "Glazed Meat Skewer",
+  "item.botwcamping.banana": "Banana",
+
+  "block.botwcamping.hey_lois": "Hey Lois!",
+  "block.botwcamping.truffled_dirt": "Truffled Dirt",
+  "block.botwcamping.truffled_coarse_dirt": "Truffled Coarse Dirt",
+  "block.botwcamping.truffled_rooted_dirt": "Truffled Rooted Dirt",
+  "block.botwcamping.salt_ore": "Rock Salt",
+  "block.botwcamping.polished_salt": "Polished Rock Salt",
+
+  "block.botwcamping.rushroom": "Rushroom",
+  "block.botwcamping.potted_rushroom": "Potted Rushroom",
+  "block.botwcamping.banana_peel": "Banana Peel"
+}

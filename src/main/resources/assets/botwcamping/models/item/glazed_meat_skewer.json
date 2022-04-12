@@ -1,0 +1,8 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "minecraft:item/stick",
+    "layer1": "botwcamping:item/meat_skewer",
+    "layer2": "botwcamping:item/glaze_meat"
+  }
+}
