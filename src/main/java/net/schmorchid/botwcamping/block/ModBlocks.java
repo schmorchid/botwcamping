@@ -1,5 +1,6 @@
 package net.schmorchid.botwcamping.block;
 
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -12,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.schmorchid.botwcamping.BOTWCamping;
+import net.schmorchid.botwcamping.block.custom.PeelBlock;
 import net.schmorchid.botwcamping.item.ModCreativeModeTab;
 import net.schmorchid.botwcamping.item.ModItems;
 
@@ -47,11 +49,19 @@ public class ModBlocks {
 
 
     public static final RegistryObject<Block> BANANA_PEEL = registerBlock("banana_peel",
-            () -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 8,
-                    BlockBehaviour.Properties.copy(Blocks.DANDELION).noCollission()), ModCreativeModeTab.BOTWC_ITEMS);
+            () -> new PeelBlock(
+                    BlockBehaviour.Properties.copy(Blocks.DANDELION).friction(0.1F).sound(SoundType.SLIME_BLOCK).noCollission()), ModCreativeModeTab.BOTWC_FOOD);
+
+    public static final RegistryObject<Block> IRONSHROOM = registerBlock("ironshroom",
+            () -> new Block(
+                    BlockBehaviour.Properties.copy(Blocks.BROWN_MUSHROOM).noCollission()), ModCreativeModeTab.BOTWC_ITEMS);
+
+    public static final RegistryObject<Block> POTTED_IRONSHROOM = registerBlockWithoutBlockItem("potted_ironshroom",
+            () -> new FlowerPotBlock(null, ModBlocks.IRONSHROOM,
+                    BlockBehaviour.Properties.copy(Blocks.POTTED_RED_MUSHROOM).noOcclusion()));
 
     public static final RegistryObject<Block> RUSHROOM = registerBlock("rushroom",
-            () -> new FlowerBlock(MobEffects.MOVEMENT_SPEED, 8,
+            () -> new Block(
                     BlockBehaviour.Properties.copy(Blocks.RED_MUSHROOM).noCollission()), ModCreativeModeTab.BOTWC_ITEMS);
 
     public static final RegistryObject<Block> POTTED_RUSHROOM = registerBlockWithoutBlockItem("potted_rushroom",

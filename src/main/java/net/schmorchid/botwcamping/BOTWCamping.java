@@ -20,6 +20,7 @@ import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.schmorchid.botwcamping.block.ModBlocks;
 import net.schmorchid.botwcamping.item.ModItems;
+import net.schmorchid.botwcamping.sound.ModSounds;
 import org.slf4j.Logger;
 
 import java.util.stream.Collectors;
@@ -41,21 +42,27 @@ public class BOTWCamping
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        ModSounds.register(eventBus);
+
         eventBus.addListener(this::setup);
+        eventBus.addListener(this::clientSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.IRONSHROOM.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_IRONSHROOM.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BANANA_PEEL.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.RUSHROOM.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.POTTED_RUSHROOM.get(), RenderType.cutout());
-        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BANANA_PEEL.get(), RenderType.cutout());
     }
 
     private void setup(final FMLCommonSetupEvent event)
     {
         event.enqueueWork(() -> {
+            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.IRONSHROOM.getId(), ModBlocks.POTTED_IRONSHROOM);
             ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.RUSHROOM.getId(), ModBlocks.POTTED_RUSHROOM);
         });
     }

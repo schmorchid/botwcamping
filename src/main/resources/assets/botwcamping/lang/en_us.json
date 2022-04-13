@@ -19,7 +19,11 @@
   "block.botwcamping.salt_ore": "Rock Salt",
   "block.botwcamping.polished_salt": "Polished Rock Salt",
 
+  "block.botwcamping.ironshroom": "Ironshroom",
+  "block.botwcamping.potted_ironshroom": "Potted Ironshroom",
   "block.botwcamping.rushroom": "Rushroom",
   "block.botwcamping.potted_rushroom": "Potted Rushroom",
-  "block.botwcamping.banana_peel": "Banana Peel"
+  "block.botwcamping.banana_peel": "Banana Peel",
+
+  "sounds.botwcamping.banana_peel_slip": "Slips on a banana peel"
 }

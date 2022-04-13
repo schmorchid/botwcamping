@@ -1,12 +1,17 @@
 package net.schmorchid.botwcamping.item;
 
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.schmorchid.botwcamping.BOTWCamping;
+import net.schmorchid.botwcamping.block.ModBlocks;
+import net.schmorchid.botwcamping.item.custom.BananaItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -34,7 +39,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOTWC_FOOD).food(ModFoods.GLAZED_MEAT_SKEWER)));
 
     public static final RegistryObject<Item> BANANA = ITEMS.register("banana",
-            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.BOTWC_FOOD).food(ModFoods.BANANA)));
+            () -> new BananaItem(new Item.Properties().stacksTo(1).tab(ModCreativeModeTab.BOTWC_FOOD).food(ModFoods.BANANA)));
+
+    //public static final RegistryObject<Item> BANANA_PEEL = ITEMS.register("banana_peel",
+    //        () -> new BlockItem(ModBlocks.BANANA_PEEL, (new Item.Properties()).stacksTo(1).tab(CreativeModeTab.TAB_FOOD)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
